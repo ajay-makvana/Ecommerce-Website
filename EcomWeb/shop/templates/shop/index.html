@@ -43,7 +43,7 @@ padding-left: 0,
 padding-right: 0;
 }
 
-{% endblock style %}
+{% endblock %}
 
 
 {% block body %}
@@ -93,41 +93,6 @@ padding-right: 0;
           {% endfor %}
         </div>
 
-        <!--For Load First with 0 item and then all
-        <div class="container carousel-inner no-padding">
-
-          <div class="carousel-item active">
-            <div class="col-xs-3 col-sm-3 col-md-3">
-              <div class="card" style="width: 18rem;">
-                  # for static load <img src='{% static "shop/test.jfif"  %}' class="card-img-top" alt="...">
-                <img src='/media/{{products.0.product_image}}' class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{products.0.product_name}}</h5>
-                    <p class="card-text">{{products.0.product_description}}</p>
-                    <a id="pr{{products.0.id}}" href="#" class="btn btn-primary cart">Add To Cart</a>
-                </div>
-              </div>
-           </div>
-
-
-              {% for i in products|slice:"1:" %}
-            <div class="col-xs-3 col-sm-3 col-md-3">
-              <div class="card" style="width: 18rem;">
-                <img src='/media/{{i.product_image}}' class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{i.product_name}}</h5>
-                  <p class="card-text">{{i.product_description}}</p>
-                  <a id="pr{{i.id}}" href="#" class="btn btn-primary cart">Add To Cart</a>
-                </div>
-              </div>
-            </div>
-              {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
-          </div><div class="carousel-item">
-            {% endif %}
-              {% endfor %}
-        </div>
-        -->
-
       </div>
     </div>
 
@@ -144,6 +109,3 @@ padding-right: 0;
 </div>
 {% endblock %}
 
-{% block js %}
-
-{% endblock %}
