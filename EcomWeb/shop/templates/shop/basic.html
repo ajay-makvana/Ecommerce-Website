@@ -59,6 +59,7 @@
 <script>
     //find cart in local storage
 
+    console.log('clicked');
     if (localStorage.getItem('cart') == null)
     {
         var cart = {};
@@ -163,9 +164,7 @@
     {
         for (var item in cart)
         {
-            document.getElementById('div' + item).innerHTML = "<button id=" + item + " href="#
-            " class="
-            btn btn - primary cart ">Add To Cart</button>";
+            document.getElementById('div' + item).innerHTML = '<button id=" + item + " href="#" class="btn btn - primary cart ">Add To Cart</button>';
         }
         localStorage.clear();
         cart = {};
